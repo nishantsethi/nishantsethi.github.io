@@ -1,0 +1,643 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Nishant Sethi</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="a4d65541-ead9-4586-ac49-a699bff402ff" class="page sans"><header><h1 class="page-title">Nishant Sethi</h1></header><div class="page-body"><blockquote id="f7489ab7-951c-40a8-965d-3beee3ccdd89" class="">Software Development Engineer with experience in Python, C, C++ and Dart.</blockquote><div id="aebc506e-5545-41df-ba4f-b1c08f49cb29" class="column-list"><div id="23cc0d1f-a06e-4f1a-a37a-9e1f69b85657" style="width:50%" class="column"><figure id="05f1888f-cc47-4fac-813c-1cff32a08493" class="image"><a href="Nishant%20Sethi%2005f1888fcc474fac813c1cff32a08493/WhatsApp_Image_2020-07-28_at_7.58.36_PM.jpeg"><img style="width:288px" src="Nishant%20Sethi%2005f1888fcc474fac813c1cff32a08493/WhatsApp_Image_2020-07-28_at_7.58.36_PM.jpeg"/></a></figure></div><div id="79674b64-8412-4a55-9a71-c325fc67a6fb" style="width:50%" class="column"><p id="329ad8ec-1ba1-4cdf-a114-e9d167c8da57" class="">
+</p><p id="f4593d01-3b7b-4d6c-b961-3e89d28b0590" class="">
+</p><p id="a2d8165c-d3ca-438c-9ed4-69d087631f82" class="">
+</p><p id="bbe5ffd9-f3b4-4762-befc-98362889a505" class="">
+</p><h2 id="9b8bcfe5-2a38-429d-b31b-9fbe9ac48a09" class="">Hi, I am Nishant Sethi 👨‍💻 A Software Developer and Data Scientist from Delhi, India. I enjoy working with new technologies to create State-of-the-art tech </h2><p id="b243bf9a-4454-45ef-8a70-2d819e0b6aef" class="">
+</p></div></div><h1 id="c5f6bff9-571b-4f4a-b9bc-9c4a681a576f" class="">☎️ Contact information</h1><p id="e33b3673-aa5e-4134-abbb-063d562848c6" class="">
+</p><p id="cbf75a99-41eb-4a0c-9a20-16930935ba7c" class="">📧 sethi.nishant42@gmail.com</p><p id="10dfe208-2ee9-4f1c-8fa8-e8c6a0be0f3a" class="">🐦 <a href="https://twitter.com/sethinishant">@SethiNishant</a></p><p id="e565e6be-f5ae-4371-ac20-fa4981d84700" class="">🔗 LinkedIn</p><hr id="60cd26c2-96f6-4588-bd33-ec17b65409a2"/><h1 id="f1ce9634-4260-4f13-8669-9865bdcf7727" class="">👨🏽‍💻 Work experience</h1><h2 id="133cf67b-d0cc-4017-bc46-b07c055dcf2e" class="">Data Analyst Intern</h2><p id="ebf5fa79-bdd6-40c7-9d02-b2beb4600fc1" class="block-color-gray">NCR Corporation<em>, Gurgaon – Jan 2020 - Present</em></p><ul id="1ee633e7-980a-479b-9aa8-47c38f604a1b" class="bulleted-list"><li>Worked on developing a document parser using Python, Django.</li></ul><ul id="c1420cba-ebaf-40bb-82ff-ea2674845a4e" class="bulleted-list"><li>Worked on Automation projects using Python.</li></ul><ul id="ad17b698-b910-420d-bff7-6ed49771e7d5" class="bulleted-list"><li>Worked on Informatica and its admin activities.</li></ul><h2 id="0d413396-1219-4ced-9694-28a92b2f496a" class="">Data Science Consultant</h2><p id="3847ba0e-4839-477c-9063-aaf8d360e337" class="block-color-gray">Centre for Civil Society<em>, Delhi – June 2019 - August 2019</em></p><ul id="50bc3cf7-e52c-4517-84b3-3d2630f4a5e3" class="bulleted-list"><li>Created Machine Learning models for classification on real time data.</li></ul><ul id="40d89ee0-f059-48f3-8e55-e5dc601523ff" class="bulleted-list"><li>Worked on Architecture for double blind validation.</li></ul><ul id="8b06389e-e9b1-45d9-9061-3c390dc84623" class="bulleted-list"><li>Created a web application using Flask for future use.</li></ul><h2 id="356cd9ed-1b9a-4041-a173-40d77d669848" class="">NLP &amp; Python Intern</h2><p id="3a4f5f73-b66a-43d7-afbe-49de6a4ed16a" class="block-color-gray">Arbunize<em>, Delhi – June 2018- January 2019</em></p><ul id="6a92c2e6-28f6-4486-842c-4f85441c9e6f" class="bulleted-list"><li>Created NLP models in python using Deep Learning.</li></ul><ul id="83269169-2718-492e-ae2d-7124265b10fa" class="bulleted-list"><li>Created Job Recommendation system using Neural networks, LSTMs, HMM.</li></ul><ul id="0cc207ee-f90f-4b5c-baee-d334964ebec2" class="bulleted-list"><li>Made recommendation models using word2vec for skill recommendation.</li></ul><h2 id="974d1626-5d7c-4d30-89a4-29687d809585" class="">Founder/ Editor-in-Chief</h2><p id="c5ed6e96-1337-40d1-b67a-f2641ffda40e" class="block-color-gray"><a href="https://www.technokick.com">Technokick</a><em>, Delhi – June 2014 - Present</em></p><ul id="dc934071-84aa-48ec-8a26-5d1d6ad2b88d" class="bulleted-list"><li>Technokick is a technology blog about mobile phones, PCs and laptops.</li></ul><ul id="cb08e5e9-d512-450a-a8b3-0e6f7b46bc49" class="bulleted-list"><li>Worked with a team of 5 writers across India.</li></ul><hr id="93d0740c-566a-4582-a461-b20afccd7ed1"/><p id="ba9f7141-f160-4f8f-b9c9-cbfebfe37101" class="">
+</p><h1 id="65b26cb5-b365-4231-8fe5-4dbdfe5a73bd" class="">📠 Projects</h1><div id="752225b6-f544-44b0-917d-d86009fb950e" class="column-list"><div id="5a7b1b28-e482-475a-8350-728059fe832a" style="width:56.25%" class="column"><figure id="78fc6040-6b24-419d-bcb9-eedc91291c57" class="image"><a href="Nishant%20Sethi%2005f1888fcc474fac813c1cff32a08493/Screenshot_at_Jul_28_20-59-43.png"><img style="width:384px" src="Nishant%20Sethi%2005f1888fcc474fac813c1cff32a08493/Screenshot_at_Jul_28_20-59-43.png"/></a></figure></div><div id="dc26d86f-328a-409c-881e-6025256983d7" style="width:43.75000000000001%" class="column"><p id="4305e023-b92d-4299-ba8c-a60c0618e892" class="">
+</p><h3 id="82c369f7-10da-41df-9c9a-592cbe9da710" class=""><a href="https://www.youtube.com/channel/UCaGNwjnSQz-B3_ntZU0rXog">Automatic Video Maker</a></h3><p id="155f99a5-927d-499f-b6fd-86502c554e6d" class="">A Fully Automatic Video Creation app that takes news from internet, makes a video out of it and uploads it on YouTube.</p><p id="3e4483a7-fb2d-450b-aef1-5059129493a5" class="">
+</p></div></div><div id="80b60ed0-8ce5-4e55-9314-35a59bd5dee1" class="column-list"><div id="52b02d2b-658e-4e6c-98d3-59e9b5cd00c0" style="width:50%" class="column"><p id="8e836b54-6dba-4a95-aa14-26c4edc1295f" class="">
+</p><p id="66baba51-b0e8-41ee-8880-467ac7c6d898" class="">
+</p><h3 id="e8b6a8a9-a265-49f1-a7fc-6b182988fdd2" class="">Amazon Price Alert</h3><p id="f0fa7687-b043-475b-ba16-122a0f778ec3" class="">A price alert app which scraps Amazon and alert&#x27;s user for change in price</p><p id="ac687da7-7efb-4ee3-8e55-2ca82e0423ed" class="">
+</p></div><div id="70fc58e3-c88f-4313-a234-4f8ffa5bff77" style="width:50%" class="column"><figure id="3add4bd0-13a6-4e02-9a9a-3a9ebc6e0fee" class="image"><a href="Nishant%20Sethi%2005f1888fcc474fac813c1cff32a08493/amazon-1a.jpg"><img style="width:360px" src="Nishant%20Sethi%2005f1888fcc474fac813c1cff32a08493/amazon-1a.jpg"/></a></figure></div></div><div id="45025e43-a8b7-4c1c-9802-72673dfb9f19" class="column-list"><div id="a911aa10-4d4a-4e60-ab9a-aca740017e2f" style="width:50%" class="column"><figure id="db55adf0-922c-4f76-b058-3e4311e03880" class="image"><a href="Nishant%20Sethi%2005f1888fcc474fac813c1cff32a08493/68747470733a2f2f692e696d6775722e636f6d2f6577447147304d2e706e67.png"><img style="width:384px" src="Nishant%20Sethi%2005f1888fcc474fac813c1cff32a08493/68747470733a2f2f692e696d6775722e636f6d2f6577447147304d2e706e67.png"/></a></figure></div><div id="2d689137-7efd-413c-8a9d-ab115a6c8a39" style="width:50%" class="column"><p id="c6c7a384-19a0-43ca-9aa8-c09465d0b506" class="">
+</p><h3 id="35de5217-2857-4f9f-b484-19355d3ae598" class=""><a href="https://github.com/nishantsethi/Rent-Calculator">Rent Income Calculator</a></h3><p id="b39670fd-f229-432e-b55f-bcda7c52f6ab" class="">A small web app to calculate the income generated from a Rental Property over a specified time.</p><p id="0ebf05a4-396a-434a-934b-bd884817698d" class="">
+</p></div></div><div id="6b0705bb-9829-44d6-942b-49c9d462c559" class="column-list"><div id="c4c9212c-0480-4e67-9d7d-741415f89f5f" style="width:43.75%" class="column"><p id="df237ab7-e92d-41b7-bab4-1bebef183a43" class="">
+</p><p id="fa1a3505-b2a3-4fc0-833d-630e2024e0ca" class="">
+</p><h3 id="b3bd27e4-16a0-4c8e-a1e7-cb0fa79f6b2e" class="">News Article Classifier</h3><p id="16eb7ff4-a9b9-486a-b71a-57689cecffc3" class="">A project made for CCS for classification of news articles</p></div><div id="83634308-0c08-4e8b-9612-5d889c2ab255" style="width:56.25%" class="column"><figure id="df2f690d-ec8d-4907-ae26-b25f95b95830" class="image"><a href="Nishant%20Sethi%2005f1888fcc474fac813c1cff32a08493/news.jpg"><img style="width:432px" src="Nishant%20Sethi%2005f1888fcc474fac813c1cff32a08493/news.jpg"/></a></figure></div></div><h1 id="c78719fe-3864-41d9-ab3d-b40ee4364479" class="">🛠 Skills</h1><h2 id="733ad80c-50d6-4986-b9e6-08205962a58e" class="">💻 Technology</h2><h3 id="4f3cb13d-7f41-400c-b224-8c066aa4fb8f" class="">Python ⭐️⭐️⭐️⭐️</h3><p id="4a034629-ce84-4b29-be4f-9910acf8e625" class="">My &quot;native&quot; programming language, I&#x27;ve worked with it for over 5 years. I&#x27;ve used it to build machine learning models using FastAI, Pytorch, made statistical models with the help of Pandas and well as created web applications using Flask and Django.</p><h3 id="694547ab-30c0-490f-a3af-3f1e49c2debf" class="">Data Science ⭐️⭐️⭐️⭐</h3><p id="35a3c4ef-1d55-46cf-bee1-2135d128562c" class="">My language for choice is Python here. Using packages like Pandas, Sklearn and Tensorflow, I build  models to analyse and make predictions. </p><h3 id="8a76f68d-b538-4682-8311-eeaedf1f9474" class="">Flask ⭐️⭐️⭐️⭐</h3><p id="67bc1947-d0ee-4766-90bb-0788174878ba" class="">My go-to language for adding web functionality to any project. Be it a simple API or a large Web Application, I have used Flask to do it all 😁.</p><h3 id="08f73076-103b-47d1-9674-2f82423ec40e" class="">C ⭐️⭐️⭐️</h3><p id="050c61fa-6f2c-4eab-8cb7-6cd0a448bb51" class="">The language which showed me how powerful Programming can be. Use it to create windows applications.</p><h3 id="f4d4e1e6-9509-4bc5-89c0-9166367f2efb" class="">Flutter ⭐️⭐️</h3><p id="2b16bd88-43f4-44ff-9ee5-29d9891ad655" class="">Something which I picked up very recently. Have made a couple of projects, will sure be building more.</p><blockquote id="900ecb46-86c5-4960-9378-94aad1569985" class="">After all language is just a tool</blockquote><hr id="287a0736-310d-496d-8df1-e105fc98aa67"/><h1 id="9b64dc31-2d15-40d3-98d3-3ffb5aa2e71e" class="">📜 Research</h1><h3 id="a36240ad-2205-462f-b766-60caf6e78243" class=""><a href="Nishant%20Sethi%2005f1888fcc474fac813c1cff32a08493/cudem.pdf">Collection and Usage of Data in Ethical Manners, CUDEM</a></h3><ul id="e70008d2-5aed-4930-81e5-0cfbff219cca" class="bulleted-list"><li>Research paper researching about the various ways in which big corporations can store and use user’s data without breaching their privacy.</li></ul><ul id="396ccf44-c33f-4d4c-9dc4-78ad30f19375" class="bulleted-list"><li>Presented at TIMES Conference, SRM University Haryana, Paper ID - TIMES19149</li></ul><h3 id="c8533148-1fb7-4b2c-ab43-a9073a4947f5" class=""><a href="Nishant%20Sethi%2005f1888fcc474fac813c1cff32a08493/job_matching.pdf">Most Common Methods for Job Matching Systems</a></h3><ul id="f63b687b-b192-4f09-9c5c-fc821f2b5845" class="bulleted-list"><li>Research paper researching about the various ways in which big corporations can store and use user’s data without breaching their privacy.</li></ul><ul id="9c699075-0b2a-43e8-be7f-70d6228c68f0" class="bulleted-list"><li>Presented at TIMES Conference, SRM University Haryana, Paper ID - TIMES19149</li></ul><hr id="cbb8eb0b-2f6f-429e-b9e4-7cd82eee58b4"/><h1 id="9fdc24c1-5206-4059-88d1-f08df71a18a3" class="">📚 Education</h1><h2 id="b653b298-0099-4b22-955a-3c7ab71092b5" class="">B.Tech, Computer Science Engg, SRM University, NCR</h2><p id="eacd165a-f2b5-490c-92ab-22919eb6648f" class="block-color-gray"><em>2016 - 2020</em></p><h2 id="b0240dfd-f31a-46b4-bef6-1938d55c5a03" class="">12th Standard, CBSE Board</h2><p id="edfdad1b-e26e-4c16-823a-f05109030fa6" class="block-color-gray"><em>2016</em></p><h2 id="1f43d5d6-e23d-46cc-9e12-2aa2a61f7029" class="">10th Standard, CBSE Board</h2><p id="b53ae9c7-28ff-4d68-bc07-eb85382db011" class="block-color-gray"><em>2014</em></p></div></article></body></html>
